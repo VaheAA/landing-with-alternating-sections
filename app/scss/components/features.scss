@@ -1,0 +1,78 @@
+@use '../utils/' as *;
+
+.features {
+    padding-top: 150px;
+    
+    @include breakpoint-down(small) {
+        padding-top: 75px;
+    }
+    
+    &__block {
+        box-shadow: 0px 0px 15px 1px rgba($color: #808d99, $alpha: .3);
+        border-radius: 5px;
+        padding-left: 120px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-right: 35px;
+        margin-bottom: 35px;
+        
+        @include breakpoint-down(small) {
+            padding: 35px;
+        }
+    }
+    
+    &__block--reversed {
+        padding-left: 35px;
+        padding-right: 120px;
+        
+                
+        @include breakpoint-down(small) {
+            padding: 35px;
+        }
+    }
+    
+    
+    &__block-info {
+        max-width: 475px;
+        margin-right: 180px;
+        
+        @include breakpoint-down(small) {
+            margin: auto;
+            text-align: center;
+        }
+    }
+    
+    &__block-info--reversed {
+        margin-left: 180px;
+        margin-right: 0;
+        
+        @include breakpoint-down(small) {
+            margin: auto;
+        }
+    }
+    
+    &__block-title {
+        color: var(--veryDarkCyan);
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+    
+    &__block-desc {
+        font-size: 16px;
+        color: var(--grayishBlue);
+        line-height: 1.5;
+    }
+    
+    &__block-image {
+       max-width: 100%;
+       
+       @include breakpoint-down(small) {
+           margin-bottom: 65px;
+       }
+        
+        img {
+            max-width: 100%;
+        }
+    }
+    
+}
