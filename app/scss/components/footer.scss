@@ -1,0 +1,189 @@
+@use '../utils/' as *;
+.footer {
+    background-color: var(--veryDarkCyan);
+    padding-bottom: 60px;
+    position: relative;
+    margin-top: 350px;
+    
+    @include breakpoint-down(small) {
+        margin-top: 300px;
+    }
+    
+    @include breakpoint-down(medium) {
+        margin-top: 300px;
+    }
+    
+    &__inner {
+        padding-top: 180px;
+        color: white;
+        margin: 0 15px 35px 15px;
+    }
+    
+    &__logo {
+        margin-bottom: 45px;
+    }
+    
+    &__content {
+        max-width: 100%;
+    }
+    
+    &__about {
+        max-width: 360px;
+        
+        @include breakpoint-down(small) {
+            margin-bottom: 50px;
+            max-width: 100%;
+        }
+    }
+    
+    &__about-item {
+        margin-bottom: 30px;
+    }
+    
+    &__about-icon {
+        margin-right: 30px;
+        height: 100%;
+    }
+    
+    &__about-desc {
+        line-height: 1.5;
+        font-size: 14px;
+    }
+    
+    &__about-tel {
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+        
+        transition: all .2s ease;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    &__about-email {
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+        
+        transition: all .2s ease;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    &__menu-list {
+        max-width: 310px;
+        max-height: 110px;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "1 4"
+        "2 5"
+        "3 6";
+        column-gap: 130px;
+        
+                
+        @include breakpoint-down(small) {
+            max-height: 100%;
+            max-width: 100%;
+            margin-bottom: 50px;
+            display: block;
+        }
+        
+        @include breakpoint-down(medium) {
+            column-gap: 65px;
+        }
+    }
+    
+    &__menu-item {
+        
+        &:nth-of-type(1) {
+            grid-area: 1;
+        }
+        
+        &:nth-of-type(2) {
+            grid-area: 2;
+
+        }
+        
+        &:nth-of-type(3) {
+            grid-area: 3;
+        }
+        
+        &:not(:last-of-type) {
+            margin-bottom: 30px;
+        }
+        
+        @include breakpoint-down(small) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__menu-link {
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        transition: all .2s ease;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    &__social-list {
+        display: flex;
+        
+        @include breakpoint-down(small) {
+            justify-content: center;
+        }
+        
+        @include breakpoint-down(medium) {
+            flex-direction: column;
+        }
+    }
+    
+    &__social-item {
+        
+        &:not(:last-of-type) {
+            margin-right: 10px;
+            
+            @include breakpoint-down(medium) {
+                margin-bottom: 20px;
+
+            }
+        }
+        
+    }
+    
+    &__social-link {
+        font-size: 26px;
+        color: white;
+        transition: all .2s ease;
+
+        &:hover {
+            color: var(--pink);
+        }
+        @include breakpoint-down(small) {
+
+        }
+        
+    }
+    
+    &__copyright {
+        font-size: 16px;
+        display: flex;
+        justify-content: flex-end;
+        color: white;
+        padding-right: 80px;
+        
+        @include breakpoint-down(small) {
+            text-align: center;
+            justify-content: center;
+            padding-right: 0;
+        }
+    }
+
+}

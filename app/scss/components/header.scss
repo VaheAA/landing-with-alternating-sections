@@ -72,6 +72,10 @@
             margin: auto;
             margin-bottom: 70px;
         }
+        
+        @include breakpoint-down(medium) {
+            max-width: 320px;
+        }
     }
     
     &__info-title {
@@ -83,6 +87,10 @@
         
         @include breakpoint-down(small) {
             font-size: 32px;
+        }
+        
+        @include breakpoint-down(medium) {
+            font-size: 36px;
         }
     }
     

@@ -18,6 +18,11 @@
             margin-left: 0;
             margin-right: 0;
         }
+        
+        @include breakpoint-down(medium) {
+            padding: 50px 35px 50px 50px;
+
+        }
     }
     
     &__block--reversed {
@@ -27,6 +32,11 @@
                 
         @include breakpoint-down(small) {
             padding: 35px;
+        }
+        
+        @include breakpoint-down(medium) {
+            padding: 50px 35px 50px 50px;
+
         }
     }
     

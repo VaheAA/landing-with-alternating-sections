@@ -1,14 +1,29 @@
 @use '../utils/' as *;
 
 .trial {
-    margin-top: 150px;
+    position: absolute;
+    top: -300px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 1px rgba($color: #808d99, $alpha: .3);
+    margin-top: 100px;
+    height: 270px;
     
-    &__inner {
-        max-width: 800px;
-        margin: auto;
-        text-align: center;
-        box-shadow: 0px 0px 15px 1px rgba($color: #808d99, $alpha: .3);
-        border-radius: 5px;
+    @include breakpoint-down(small) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    
+    @include breakpoint-down(medium) {
+        margin-left: 10px;
+        margin-right: 10px;
     }
     
     &__inner-content {
@@ -17,12 +32,22 @@
         align-items: center;
         justify-content: center;   
         min-height: 270px; 
+        
+        @include breakpoint-down(small) {
+            padding-left: 15px;
+            padding-right: 15px;
         }
+        
+    }
     
     &__title {
         margin-bottom: 50px;
         color: var(--veryDarkCyan);
         font-size: 28px;
+        
+        @include breakpoint-down(small) {
+            font-size: 24px;
+        }
     }
     
     &__button {
@@ -36,5 +61,11 @@
         font-weight: bold;
         font-size: 18px;
         min-width: 390px;
+        
+        @include breakpoint-down(small) {
+            min-width: 235px;
+            font-size: 16px;
+            padding: 20px;
+        }
     }
 }
